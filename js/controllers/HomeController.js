@@ -97,7 +97,9 @@ app.controller('HomeController', ['$scope', function($scope) {
 
 	
 	/* ADD VARIABLES FOR STEP 3 HERE */
-	
+	var title = "IMDB + YourName’s Top 8 Movies";
+	var owner = "Christian Meier";
+	var github = "https://github.com/crmeier294/IS219s18Meier-Project3";
 	
 	
 	
