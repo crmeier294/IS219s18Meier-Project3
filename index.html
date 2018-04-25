@@ -47,8 +47,8 @@
 					<p class="websites">Websites: <a>{{movies[0].imbd}}</a> | <a>{{movies[0].website}}</a></p>
 					
 		            <div class="social">
-		              <p class="likes"><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{movies[0].likes}}</p>
-		              <p class="dislikes"><i class="fa fa-thumbs-down" aria-hidden="true"></i> {{movies[0].dislikes}}</p>
+		              <p ng-click="like(0)" class="likes"><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{movies[0].likes}}</p>
+		              <p ng-click="dislike(0)" class="dislikes"><i class="fa fa-thumbs-down" aria-hidden="true"></i> {{movies[0].dislikes}}</p>
 		            </div>
             </div> 
         </div>
@@ -63,6 +63,11 @@
   		</a>
       </div>
     </div>
+	
+	<div ng-repeat="poster in movies">
+				<span ng-if="$index == 1"> {{poster.posters[0]}}</span>
+			</div>
+		</div>
 
   
   	<!-- Modules -->
