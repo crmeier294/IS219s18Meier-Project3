@@ -34,26 +34,27 @@
       
       <div class="container">
 
-        <div class="col-md-6"> 
+        <div ng-repeat="movie in movies" class="col-md-6"> 
             <div class="thumbnail">
 
-					<img class="poster" ng-src="{{movies[0].posters[0]}}"/>
-					<div class="imageInfo">{{movies[0].posterindex}}</div>
+					<img class="poster" ng-click="posterClick($index)"ng-src="{{movies[$index].posters[movies[$index].posterindex]}}"/>
+					<div class="imageInfo">Current Poster: {{movies[$index].posterindex}} | Total Posters: {{movies[$index].posters.length}}</div>
 					
-					<p class="title">{{movies[0].title}} ({{movies[0].country}})</p> 
-					<p class="score"><i class="fa fa-star" aria-hidden="true"></i> {{movies.iscore}} </p>
-					<p class="runtime">Runtime: {{movies[0].runtime}}</p> 
-					<p class="released">Released: {{movies[0].released | date}} | Rated: {{movies[0].rating}}</p>
-					<p class="websites">Websites: <a>{{movies[0].imbd}}</a> | <a>{{movies[0].website}}</a></p>
+					<p class="title">{{movies[$index].title}} ({{movies[$index].country}})</p> 
+					<p class="score"><i class="fa fa-star" aria-hidden="true"></i> {{movies[$index].iscore}} </p>
+					<p class="runtime">Runtime: {{movies[$index].runtime}}</p> 
+					<p class="released">Released: {{movies[$index].released | date}} | Rated: {{movies[$index].rating}}</p>
+					<p class="websites">Websites: <a>{{movies[$index].imbd}}</a> | <a>{{movies[$index].website}}</a></p>
 					
 		            <div class="social">
-		              <p ng-click="like(0)" class="likes"><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{movies[0].likes}}</p>
-		              <p ng-click="dislike(0)" class="dislikes"><i class="fa fa-thumbs-down" aria-hidden="true"></i> {{movies[0].dislikes}}</p>
+		              <p ng-click="like($index)" class="likes"><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{movies[$index].likes}}</p>
+		              <p ng-click="dislike($index)" class="dislikes"><i class="fa fa-thumbs-down" aria-hidden="true"></i> {{movies[$index].dislikes}}</p>
 		            </div>
-            </div> 
+            </div> 			
         </div>
 
       </div>
+	  
     </div>
 
     <div class="footer">
@@ -63,11 +64,6 @@
   		</a>
       </div>
     </div>
-	
-	<div ng-repeat="poster in movies">
-				<span ng-if="$index == 1"> {{poster.posters[0]}}</span>
-			</div>
-		</div>
 
   
   	<!-- Modules -->
