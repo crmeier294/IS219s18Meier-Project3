@@ -42,9 +42,9 @@
 					
 					<p class="title">{{movies[$index].title}} ({{movies[$index].country}})</p> 
 					<p class="score"><i class="fa fa-star" aria-hidden="true"></i> {{movies[$index].iscore}} </p>
-					<p class="runtime">Runtime: {{movies[$index].runtime}}</p> 
+					<p class="runtime">Runtime: {{textTime(movies[$index].runtime)}}</p> 
 					<p class="released">Released: {{movies[$index].released | date}} | Rated: {{movies[$index].rating}}</p>
-					<p class="websites">Websites: <a>{{movies[$index].imbd}}</a> | <a>{{movies[$index].website}}</a></p>
+					<p class="websites">Websites: <a href= "{{movies[$index].imdb}}"> IMDB </a> | <a href ="{{movies[$index].website}}"> Website </a></p>
 					
 		            <div class="social">
 		              <p ng-click="like($index)" class="likes"><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{movies[$index].likes}}</p>
@@ -59,8 +59,8 @@
 
     <div class="footer">
       <div class="container">
-		<a id="github" class="btn btn-lg btn-warning">
-			<i class="fa fa-lg fa-github pull-left" aria-hidden="true"></i> {{owner}} {{github}}
+		<a id="github" class="btn btn-lg btn-warning" href = "{{github}}">
+			<i class="fa fa-lg fa-github pull-left" aria-hidden="true"></i> {{owner}} {{github}};
   		</a>
       </div>
     </div>
