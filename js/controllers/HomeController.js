@@ -88,8 +88,49 @@ app.controller('HomeController', ['$scope', function($scope) {
       likes:	812,
       dislikes:	101,
       posterindex: 0
+	},
+	{
+	  title:	'Pirates of the Caribbean', 
+      iscore:	8.0,
+      rating:	'PG-13',
+      runtime:	143,
+      released:	new Date('2003', '7', '9'),
+      country:	'USA',
+      posters:	['img/pirates.jpg', 'img/pirates2.jpg'],
+      imdb:		'https://www.imdb.com/title/tt0325980/?ref_=nv_sr_2',
+      website:	'http://pirates.disney.com/',
+      likes:	619,
+      dislikes:	101,
+      posterindex: 0
+	},
+	{
+	  title:	'Star Wars: A New Hope', 
+      iscore:	8.6,
+      rating:	'PG',
+      runtime:	121,
+      released:	new Date('1997', '5', '25'),
+      country:	'USA',
+      posters:	['img/starwars.jpg', 'img/starwars2.jpg', 'img/starwars3.jpg'],
+      imdb:		'https://www.imdb.com/title/tt0076759/?ref_=nv_sr_6',
+      website:	'https://www.starwars.com/',
+      likes:	666,
+      dislikes:	102,
+      posterindex: 0
+	},
+	{
+	  title:	'Pulp Fiction', 
+      iscore:	8.9,
+      rating:	'R',
+      runtime:	154,
+      released:	new Date('1994', '10', '14'),
+      country:	'USA',
+      posters:	['img/pulp.jpg', 'img/pulp2.jpg'],
+      imdb:		'https://www.imdb.com/title/tt0110912/?ref_=nv_sr_1',
+      website:	'https://en.wikipedia.org/wiki/Pulp_Fiction',
+      likes:	1000,
+      dislikes:	103,
+      posterindex: 0
 	}
-	
 	
   ];
 	
