@@ -131,7 +131,12 @@ app.controller('HomeController', ['$scope', function($scope) {
 		}
 	};
 
-	
+	$scope.textTime = function(minutes)
+	{
+		$scope.hours = (Math.floor(Math.abs(minutes) / 60));
+		$scope.minutes = (Math.abs(minutes) % 60);
+		return $scope.hours + 'hrs ' + $scope.minutes + 'min ';
+	};
 	
 	
 	
