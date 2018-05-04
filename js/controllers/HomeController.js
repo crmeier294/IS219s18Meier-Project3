@@ -96,7 +96,7 @@ app.controller('HomeController', ['$scope', function($scope) {
       runtime:	143,
       released:	new Date('2003', '7', '9'),
       country:	'USA',
-      posters:	['img/pirates.jpg', 'img/pirates2.jpg'],
+      posters:	['img/pirates.jpg', 'img/pirates3.jpg'],
       imdb:		'https://www.imdb.com/title/tt0325980/?ref_=nv_sr_2',
       website:	'http://pirates.disney.com/',
       likes:	619,
@@ -138,7 +138,7 @@ app.controller('HomeController', ['$scope', function($scope) {
 
 	
 	/* ADD VARIABLES FOR STEP 3 HERE */
-	$scope.title = "IMDB + YourName's Top 8 Movies";
+	$scope.title = "IMDB + Christian's Top 8 Movies";
 	$scope.owner = "Christian Meier";
 	$scope.github = "https://github.com/crmeier294/IS219s18Meier-Project3";
 	
@@ -151,7 +151,7 @@ app.controller('HomeController', ['$scope', function($scope) {
 	/* ADD FUNCTIONS FOR STEP 7 HERE */
 	$scope.like = function(index)
 	{
-		$scope.movies[index].likes += 1;		
+		$scope.movies[index].likes += 1;
 	};
 	
 	$scope.dislike = function(index)

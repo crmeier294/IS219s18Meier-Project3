@@ -38,7 +38,7 @@
             <div class="thumbnail">
 
 					<img class="poster" ng-click="posterClick($index)"ng-src="{{movies[$index].posters[movies[$index].posterindex]}}"/>
-					<div class="imageInfo">Current Poster: {{movies[$index].posterindex}} | Total Posters: {{movies[$index].posters.length}}</div>
+					<div class="imageInfo">Poster: {{movies[$index].posterindex + 1}} of {{movies[$index].posters.length}}</div>
 					
 					<p class="title">{{movies[$index].title}} ({{movies[$index].country}})</p> 
 					<p class="score"><i class="fa fa-star" aria-hidden="true"></i> {{movies[$index].iscore}} </p>
@@ -60,12 +60,12 @@
     <div class="footer">
       <div class="container">
 		<a id="github" class="btn btn-lg btn-warning" href = "{{github}}">
-			<i class="fa fa-lg fa-github pull-left" aria-hidden="true"></i> {{owner}} {{github}};
+			<i class="fa fa-lg fa-github pull-left" aria-hidden="true"></i> {{owner}} {{github}}
   		</a>
       </div>
     </div>
 
-  
+ 
   	<!-- Modules -->
 	<script type="text/javascript" src="js/app.js"></script>
 	 
